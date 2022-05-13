@@ -13,13 +13,13 @@ contract arrarytest{
 
       function deleteallnumbers() public {
 
-        //delete一个动态数组就是把所有都归零
-        //numbers.length = 0;
+        //delete一个动态数组就是把所有元素都删除掉
+        //delete一个固定长度数组是把所有元素归零
+       
         delete numbers;  
     }
   
      function deletesinglenumbers(uint index) public {
-        //下面这句话在0.6.0之前的版本是可以的 可以重新定义数组的长度，现在无法直接修改 可以用delete 删除所有元素 
         //delete方法只能讲ARRAY对应的INDEX的值变成0  不能删掉这个元素
         //numbers.length = 0;
          delete numbers[index];  
