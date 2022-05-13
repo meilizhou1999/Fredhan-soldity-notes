@@ -2,6 +2,8 @@
 pragma solidity >0.6.0 <0.9.0;
 
 contract arrarytest{
+
+//下面这个能观察到数组某个元素的值 需要输入INDEX
     uint[] public numbers;
 
     function addnumbers(uint data) public {
@@ -21,8 +23,15 @@ contract arrarytest{
   
      function deletesinglenumbers(uint index) public {
         //delete方法只能讲ARRAY对应的INDEX的值变成0  不能删掉这个元素
-        //numbers.length = 0;
          delete numbers[index];  
+    }
+//获取当前整体数组
+    function getarray() public view returns(uint[] memory){
+        return numbers;
+    }
+//获取当前数组长度
+    function getthelengthofarray() public view returns(uint){
+        return numbers.length;
     }
 //下面这段话用于弹出某个ARRAY里的具体元素
 //先把这个元素放到ARRAY末尾 然后把这个元素弹出
@@ -31,14 +40,9 @@ contract arrarytest{
         numbers[index] = numbers[numbers.length - 1];
         numbers.pop();
     }
-    function getarray() public view returns(uint[] memory){
-        return numbers;
-    }
 
-    function getthelengthofarray() public view returns(uint){
-        return numbers.length;
-    }
-//消耗更多GAS费 
+//下面这个函数可以删除某个元素
+//通过遍历来将每个i等有右边的I+1 然后将最后一个弹出，消耗更多GAS费 
     function orderedArray(uint index) public{
         for(uint i = index; i <(numbers.length-1);i++){
             numbers[i]  = numbers[i+1];    
