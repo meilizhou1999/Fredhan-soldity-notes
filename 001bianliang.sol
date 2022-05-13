@@ -13,7 +13,7 @@ contract bianliang{
     function getnum() public view returns(uint){
         return num1;
     }
-
+ //getstring 后面要加memory 
     function getstring() public view returns(string memory){
         return Text1;
     }
