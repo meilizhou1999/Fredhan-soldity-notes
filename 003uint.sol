@@ -36,11 +36,11 @@ contract zhengshuyunsuan{
 
     uint8 numa = 3;
     uint8 numb = 13;
-
+  //&是位与 1 & 1 = 1  1&0 = 0  0&0 = 0
     function weiyu() public view returns(uint8){
         return numa & numb;
     }
-
+  //
       function weihuo() public view returns(uint8){
         return numa | numb;
     }
