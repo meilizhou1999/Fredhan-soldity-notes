@@ -28,7 +28,7 @@ contract boolean{
         //这个结果是true  num1小于num2;
         return  num1 == num2;
     }
-
+  //&&是与
     function yu()  public view returns(bool){
         return(bijiao2() && true);
     }
@@ -36,7 +36,7 @@ contract boolean{
     function yu2()  public view returns(bool){
         return(bijiao2() && false);
     }
-
+//||是或
      function huo()  public view returns(bool){
         return(bijiao2() || false);
     }
