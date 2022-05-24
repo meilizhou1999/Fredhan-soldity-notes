@@ -2,19 +2,21 @@
 pragma solidity >0.6.0 <0.9.0;
 
 contract fixlengthArray{
-    uint[5] numbers;
 
+//定义一个只有5个元素的固定数组，数组名为numbers;
+    uint[5] numbers;
+//观察这个数组
     function getnumbers() public view returns(uint[5] memory)
     {
         return numbers;
     }
-//初始化这个数组
+//初始化这个数组 ，0号位置为100，1号位置为200
     function inital() public {
         numbers[0] = 100;
 
         numbers[1] = 200;
     }
-
+//往里传两个参数，一个是
     function setnumbers(uint index,uint value) public{
 
         numbers[index] = value;
