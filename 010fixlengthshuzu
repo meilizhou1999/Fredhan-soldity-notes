@@ -5,7 +5,7 @@ contract fixlengthArray{
 
 //定义一个只有5个元素的固定数组，数组名为numbers;
     uint[5] numbers;
-//观察这个数组
+//查看这个数组
     function getnumbers() public view returns(uint[5] memory)
     {
         return numbers;
@@ -16,7 +16,7 @@ contract fixlengthArray{
 
         numbers[1] = 200;
     }
-//往里传两个参数，一个是
+//往里传两个参数，一个是索引，一个是值
     function setnumbers(uint index,uint value) public{
 
         numbers[index] = value;
