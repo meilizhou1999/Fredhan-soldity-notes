@@ -34,7 +34,7 @@ contract paytest{
       //address  account1 = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db;
        payable(account1).transfer(msg.value);
     }
-  
+ //给当前合约地址转账是需要后面加一个回滚函数的
     function transfertothis()  payable public{
         payable(address(this)).transfer(msg.value);
     }
