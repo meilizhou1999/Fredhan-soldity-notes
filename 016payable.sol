@@ -26,7 +26,7 @@ contract paytest{
         return account.balance;
     }
 
-//想要对一个地址转账，需要把这个地址前面加上payable
+//想要对一个地址转账，需要把这个地址前面加上payable()括号里写地址
 //msg.value是一个全局变量，就是指的是我调用这个function时所设置的值
 //某个地址后面跟tansfer方法，后面调用这个函数的人会给这个地址转帐msg，value
 //这个方法只能用于外部账户 不能用于合约账户
