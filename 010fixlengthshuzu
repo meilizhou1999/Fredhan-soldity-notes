@@ -1,0 +1,40 @@
+//SPDX-License-Identifier:MIT
+pragma solidity >0.6.0 <0.9.0;
+
+contract fixlengthArray{
+    uint[5] numbers;
+
+    function getnumbers() public view returns(uint[5] memory)
+    {
+        return numbers;
+    }
+//初始化这个数组
+    function inital() public {
+        numbers[0] = 100;
+
+        numbers[1] = 200;
+    }
+
+    function setnumbers(uint index,uint value) public{
+
+        numbers[index] = value;
+    }
+//删除指定位置的数为0
+    function deletesinglenumbers(uint index) public{
+
+        delete numbers[index];
+    }
+//求整个数组的和
+    function addallnumbers() public view returns(uint){
+        uint total = 0;
+
+        for(uint i = 0; i < numbers.length;i++){
+            //total = total + numbers[i]
+            total += numbers[i];
+        }
+
+        return total;
+    }
+//固定长度数组的长度是只读的 不能被修改
+
+}
