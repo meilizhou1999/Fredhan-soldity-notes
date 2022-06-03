@@ -1,0 +1,38 @@
+//SPDX-License-Identifier:MIT
+pragma solidity >0.6.0 <0.9.0;
+
+contract zhichuandi{
+    uint public a  = 100;
+//这里的b等于a 是在区块链中创建一个新的内存，把当前A的值赋予b
+    uint public b =  a;
+
+
+
+    function changeit() public {
+        a = 999;
+
+       // b = a;
+    }
+
+
+    function valuetest() public view returns(uint,uint) {
+        uint numa = 100;
+
+        uint numb =  numa;
+
+        numa = 999;
+
+        return(numa,numb);
+
+    }
+
+    function changevalue(uint num) public pure returns(uint){
+        num++;
+        
+        return num;
+    }
+
+    function valuetest2() public {
+        changevalue(a);
+    }
+}
