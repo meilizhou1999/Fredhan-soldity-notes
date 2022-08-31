@@ -22,7 +22,7 @@ contract arrarytest{
     }
   
      function deletesinglenumbers(uint index) public {
-        //delete方法只能讲ARRAY对应的INDEX的值变成0  不能删掉这个元素
+        //delete方法只能讲ARRAY对应的INDEX的值变成初始化状态 如果是UINT 则为0  如果是bool 则为False  不能删掉这个元素
          delete numbers[index];  
     }
 //获取当前整体数组
